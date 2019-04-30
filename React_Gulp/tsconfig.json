@@ -8,6 +8,7 @@
     "outDir": "./src",
     "rootDir": "./app",
     "sourceMap": true,
+    "baseUrl": ".",
     "noImplicitAny": true
   }
 }

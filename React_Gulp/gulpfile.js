@@ -1,4 +1,4 @@
-﻿/// <binding BeforeBuild='default' />
+﻿/// <binding AfterBuild='default' />
 var browserify = require("browserify");
 var gulp = require("gulp");
 var babel = require("gulp-babel");
@@ -18,7 +18,7 @@ var path = {
     DEST: "./dist",
     DEST_SRC: "./dist/src",
     DEST_BUILD: "./dist/build",
-    ENTRY_POINT: "./src/App.js"
+    ENTRY_POINT: "./src/index.js"
 }
 
 gulp.task("minify-js", async function () {
