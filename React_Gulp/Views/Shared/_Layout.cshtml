@@ -8,14 +8,11 @@
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#ribbon").officebar()
-        });
-    </script>
 </head>
 <body>
-    @RenderBody()
-    @RenderSection("scripts", required: false)
+  <div id="root" />
+  <script src="dist/build/build.min.js"></script>
+  @RenderBody()
+  @RenderSection("scripts", required: false)
 </body>
 </html>

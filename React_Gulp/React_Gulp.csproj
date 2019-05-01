@@ -26,7 +26,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>3.4.5</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -147,26 +147,6 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\images\bg.png" />
-    <Content Include="Content\images\bg_tab.png" />
-    <Content Include="Content\images\button2_over.png" />
-    <Content Include="Content\images\button3_over.png" />
-    <Content Include="Content\images\button3_over_dropdown.png" />
-    <Content Include="Content\images\button4_over.png" />
-    <Content Include="Content\images\button5.gif" />
-    <Content Include="Content\images\button5_over.gif" />
-    <Content Include="Content\images\button_over.png" />
-    <Content Include="Content\images\dropdown.png" />
-    <Content Include="Content\images\panel_left.gif" />
-    <Content Include="Content\images\panel_right.gif" />
-    <Content Include="Content\images\popup_left.png" />
-    <Content Include="Content\images\resize.gif" />
-    <Content Include="Content\images\resize_bg.png" />
-    <Content Include="Content\images\tab_left.gif" />
-    <Content Include="Content\images\tab_left_over.gif" />
-    <Content Include="Content\images\tab_right.gif" />
-    <Content Include="Content\images\tab_right_over.gif" />
-    <Content Include="Content\jquery.ribbon.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -179,7 +159,6 @@
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
-    <Content Include="Scripts\jquery.officebar.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -229,9 +208,10 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app\components\App.tsx" />
-    <TypeScriptCompile Include="app\components\Hello.tsx" />
-    <TypeScriptCompile Include="app\components\Ribbon\Ribbon.tsx" />
+    <TypeScriptCompile Include="app\components\app.tsx" />
+    <TypeScriptCompile Include="app\components\Buttons\render.tsx" />
+    <TypeScriptCompile Include="app\components\Grid\grid.tsx" />
+    <TypeScriptCompile Include="app\components\Ribbon\ribbon.tsx" />
     <TypeScriptCompile Include="app\index.tsx" />
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,6 @@
-﻿/// <binding AfterBuild='default' />
+﻿/// <binding BeforeBuild='default' />
 var browserify = require("browserify");
+var browserifycss = require("browserify-css");
 var gulp = require("gulp");
 var babel = require("gulp-babel");
 var streamify = require("gulp-streamify");
@@ -24,9 +25,17 @@ var path = {
 gulp.task("minify-js", async function () {
     browserify({
         entries: [path.ENTRY_POINT],
-        transform: [reactify],
+        transform: [reactify]
     })
-        .bundle()
+        .transform(browserifycss, {
+            autoInject: true,
+            global: true,
+            minify: true,
+            rootDir: "src",
+        })
+        .bundle().on("error", function (error) {
+            console.log("error in browserify: " + error);
+        })
         .pipe(source(path.MINIFIED_OUT))
         .pipe(buffer())
         .pipe(babel({

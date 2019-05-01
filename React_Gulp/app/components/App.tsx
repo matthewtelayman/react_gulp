@@ -1,17 +1,29 @@
 ﻿import * as React from "react";
 
-import { Hello } from "./Hello";
-import { Ribbon } from "./Ribbon/Ribbon";
+import { Ribbon } from "./Ribbon/ribbon"
+import { Grid } from "./Grid/grid"
 
-type AppState = {}
-type AppProps = {}
+type IAppState = Readonly<typeof initAppState>
+type IAppProps = {}
 
-export class App extends React.Component<AppProps, AppState> {
+const initAppState = {
+    gridData: [{}]
+}
+
+export class App extends React.Component<IAppProps, IAppState> {
+    readonly state = initAppState
+
+    myCallback = (dataFromChild: any) => {
+        console.log("In Apps callback!");
+        console.log(dataFromChild);
+        this.setState({ gridData: dataFromChild });
+    }
+
     render() {
         return (
-            <div>
-                <Ribbon />
-                <Hello compiler="TypeScript" framework="React" />
+            <div id="app">
+                <Ribbon callbackFromParent={this.myCallback}/>
+                <Grid rowData={this.state.gridData}/>
             </div>
         )
     }
